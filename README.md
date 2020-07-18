@@ -1,6 +1,8 @@
 # Sinkhorn Policy Optimization
 
 ## 代码说明
+这个算法需要在 `spinningup` 框架中运行，这里为了方便填充代码，先独立摘出来。
+整个代码包含两个文件 `core.py` 和 `shpo.py`,具体如下。
 1. `core.py` 文件主要包含：
     - 一些工具性的函数，例如：模型参数的获取与拷贝等；
     - 网络模型：`Q-Net`, `Pi-Net` 以及 `AC-Net`;
@@ -15,7 +17,5 @@
 - 使用 `Double Q Net` 技术 以及 `Replay Buffer` 来训练 `Q-Net`;
 - 使用当前policy采集的样本来训练 `Pi-Net`;
 
-
 ## 需要补充的点
-
 文件 `shpo.py` 中的 `update_actor()` 函数中计算自然梯度的部分。
